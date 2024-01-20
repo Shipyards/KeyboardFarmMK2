@@ -1,0 +1,27 @@
+ZTRFIO - ZTR engine file abstraction
+Binary only
+
+Jake T. Ray
+Asyntryn Industries
+
+This class is the ZTR engine's file manager system, it opens a Fstream to the files and absracts all reading and writing to the file.
+
+Notes:
+as of 12/26/2023 ZTFIO lacks multithreaded compaltibility (in-progress)
+Fstream only has one pointer that is used by both the read and write function; ZTRFIO abstracts the read and write pointers
+
+member variables:
+public std::string filename | stores the actual name of the file ex. "example.bin"
+private std::streampos lastpos | stores last stream positon after moving the pointer
+private std::streampos writepos | stores abstract positon of the write pointer
+private std::streampos readpos | stores the abstract position of the read pointer
+
+
+member functions:
+constructor(std::string filenamein) | will add ".bin" to the end of the string if the 4th from last character isn't '.'
+deconstuctor()
+[stream pointer manager functions]
+void ptr_tostart() | moves the Fstream pointer to the start of the file, saves last position
+void ptr_toend() | moves the Fstream pointer to the end of the file, saves last position
+void ptr_toread() | moves the Fstream pointer to the read position, saves last position
+void ptr_towrite() | mvoes the Fstream pointer to the write position, savles last position

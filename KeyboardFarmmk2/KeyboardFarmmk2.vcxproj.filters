@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ZTRcore">
+      <UniqueIdentifier>{6f7f3ba5-a42a-4263-991b-c16e3223841f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ZTRcore\DataSystem">
+      <UniqueIdentifier>{36cf6c16-89a3-4706-8891-26464e27a766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ZTRcore\Utils">
+      <UniqueIdentifier>{97b6daae-4288-4cf4-a141-ebba8156fc00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ZTRcore\Core">
+      <UniqueIdentifier>{cee1b635-63c0-4865-9125-6187da168b50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Main menu">
+      <UniqueIdentifier>{c103ae81-cb0f-4c65-86a2-605183e423e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game menu">
+      <UniqueIdentifier>{f378693b-eac1-4ce5-b6fd-a332155e4798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ZTRcore\ZTRobject">
+      <UniqueIdentifier>{633e4690-c6b2-4fe7-8768-65354f4f3965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ZTRcore\SaveSystem">
+      <UniqueIdentifier>{e845cb59-155b-4d4b-ac82-104a83895ecf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ZTRcore\FileSystem">
+      <UniqueIdentifier>{fea7fcda-afe2-479d-af8d-5b98be7e82f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ZTRcore\GUIDsystem">
+      <UniqueIdentifier>{81d57c6f-7379-4fa7-ac8f-643b1b0635e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{82e79198-2164-464f-9a40-ae1cecc2a2d3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ZTRinterface.cpp">
+      <Filter>ZTRcore\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newGame.cpp">
+      <Filter>Main menu</Filter>
+    </ClCompile>
+    <ClCompile Include="thisGame.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="manageObjects.cpp">
+      <Filter>Game menu</Filter>
+    </ClCompile>
+    <ClCompile Include="credits.cpp">
+      <Filter>Main menu</Filter>
+    </ClCompile>
+    <ClCompile Include="saveGame.cpp">
+      <Filter>Game menu</Filter>
+    </ClCompile>
+    <ClCompile Include="threader.cpp">
+      <Filter>ZTRcore\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="editsaves.cpp">
+      <Filter>ZTRcore\SaveSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="load.cpp">
+      <Filter>ZTRcore\SaveSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="save.cpp">
+      <Filter>ZTRcore\SaveSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="saveslot.cpp">
+      <Filter>ZTRcore\SaveSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="datapacket.cpp">
+      <Filter>ZTRcore\DataSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ZTRobject.cpp">
+      <Filter>ZTRcore\ZTRobject</Filter>
+    </ClCompile>
+    <ClCompile Include="loadGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gameObjectTest.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="thisGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZTRobject.h">
+      <Filter>ZTRcore\ZTRobject</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIDgen.h">
+      <Filter>ZTRcore\GUIDsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ZTRengine.h">
+      <Filter>ZTRcore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ZTRutils.h">
+      <Filter>ZTRcore\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="gamecore.h">
+      <Filter>ZTRcore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ZTRinterface.h">
+      <Filter>ZTRcore\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="runable.h">
+      <Filter>ZTRcore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="newGame.h">
+      <Filter>Main menu</Filter>
+    </ClInclude>
+    <ClInclude Include="manageObjects.h">
+      <Filter>Game menu</Filter>
+    </ClInclude>
+    <ClInclude Include="credits.h">
+      <Filter>Main menu</Filter>
+    </ClInclude>
+    <ClInclude Include="saveGame.h">
+      <Filter>Game menu</Filter>
+    </ClInclude>
+    <ClInclude Include="ZTRFIO.h">
+      <Filter>ZTRcore\FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="threader.h">
+      <Filter>ZTRcore\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="saveslot.h">
+      <Filter>ZTRcore\SaveSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="editsaves.h">
+      <Filter>ZTRcore\SaveSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="extract_saveslots.h">
+      <Filter>ZTRcore\SaveSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="load.h">
+      <Filter>ZTRcore\SaveSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="save.h">
+      <Filter>ZTRcore\SaveSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="serializeable.h">
+      <Filter>ZTRcore\SaveSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="datapacket.h">
+      <Filter>ZTRcore\DataSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ZTRtypes.h">
+      <Filter>ZTRcore\ZTRobject</Filter>
+    </ClInclude>
+    <ClInclude Include="datacore.h">
+      <Filter>ZTRcore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="eventcore.h">
+      <Filter>ZTRcore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="proccore.h">
+      <Filter>ZTRcore\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="loadGame.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="settings.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gameObjectTest.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

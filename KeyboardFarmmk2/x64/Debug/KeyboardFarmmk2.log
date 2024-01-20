@@ -1,0 +1,70 @@
+﻿  credits.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  datapacket.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\datapacket.cpp(27,2): error C2511: 'bool ZTRengine::datapacket::deserialize(char *)': overloaded member function not found in 'ZTRengine::datapacket'
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\datapacket.h(13): message : see declaration of 'ZTRengine::datapacket'
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\datapacket.cpp(28,3): error C2671: 'ZTRengine::datapacket::deserialize': static member functions do not have 'this' pointers
+  load.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\extract_saveslots.h(36,18): warning C4101: 'e': unreferenced local variable
+  loadGame.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  main.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\gameObjectTest.h(35): error C2317: 'try' block starting on line '35' has no catch handlers
+  manageObjects.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\gameObjectTest.h(35): error C2317: 'try' block starting on line '35' has no catch handlers
+  saveGame.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  saveslot.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\gameObjectTest.h(35): error C2317: 'try' block starting on line '35' has no catch handlers
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\saveslot.cpp(29,62): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\saveslot.cpp(55,62): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  gameObjectTest.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\gameObjectTest.h(35): error C2317: 'try' block starting on line '35' has no catch handlers
+  save.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\extract_saveslots.h(36,18): warning C4101: 'e': unreferenced local variable
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\save.cpp(68,18): warning C4101: 'e': unreferenced local variable
+  editsaves.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\extract_saveslots.h(36,18): warning C4101: 'e': unreferenced local variable
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\editsaves.cpp(63,62): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+  settings.cpp
+  thisGame.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\gameObjectTest.h(35): error C2317: 'try' block starting on line '35' has no catch handlers
+  ZTRinterface.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRinterface.cpp(56,29): warning C4101: 'e1': unreferenced local variable
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRinterface.cpp(61,33): warning C4101: 'c1': unreferenced local variable
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRinterface.cpp(66,31): warning C4101: 'i1': unreferenced local variable
+  newGame.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\gameObjectTest.h(35): error C2317: 'try' block starting on line '35' has no catch handlers
+  ZTRobject.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  Generating Code...
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\editsaves.cpp(71): warning C4715: 'ZTRengine::editsaves::removesave': not all control paths return a value

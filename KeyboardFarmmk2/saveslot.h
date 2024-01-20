@@ -19,7 +19,6 @@ namespace ZTRengine
 	public:
 		string filename;
 		string filenameactual;
-		saveslot();
 		saveslot(string);
 		string get_name();
 		void runsave();

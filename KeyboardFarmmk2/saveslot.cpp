@@ -9,10 +9,6 @@ using namespace std;
 
 namespace ZTRengine
 {
-	saveslot::saveslot()
-	{
-
-	}
 	saveslot::saveslot(string filenamein)
 	{
 		this->filename = filenamein;
@@ -66,12 +62,20 @@ namespace ZTRengine
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 		string packet_type;
 		ZTRtypes::ZTRtype loadobjtype;
+		slotinfo thisinfo;
 		cout << "loading from file: " << this->filename << endl;
+		thisinfo = workingfile->read<slotinfo>(ZTRFIO::standard);
 
 		loadobjtype = workingfile->read<ZTRtypes::ZTRtype>(ZTRFIO::standard);
-		swtich(loadobjtype)
+		switch(loadobjtype)
 		{
-
+		case ZTRtypes::test:
+			cout << "loading test_object" << endl;
+			gameObjectTest::DPlocal* loadpacket = new gameObjectTest::DPlocal();
+			break;
+		default:
+			throw ZTRutils::ID10T_ERR();
+			break;
 		}
 
 		cout << "loading from file: " << this->filename << "complete\n";

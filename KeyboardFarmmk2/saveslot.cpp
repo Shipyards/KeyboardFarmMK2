@@ -65,6 +65,7 @@ namespace ZTRengine
 	{
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 		string packet_type;
+		//test
 		cout << "loading from file: " << this->filename << endl;
 
 		workingfile->read<ZTRtypes::ZTRtype>(ZTRFIO::standard);

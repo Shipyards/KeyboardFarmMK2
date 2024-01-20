@@ -65,16 +65,9 @@ namespace ZTRengine
 	{
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 		string packet_type;
-		ZTRtypes::ZTRtype loadobjtype;
 		cout << "loading from file: " << this->filename << endl;
 
 		workingfile->read<ZTRtypes::ZTRtype>(ZTRFIO::standard);
-
-
-		switch (loadobjtype)
-		{
-
-		}
 
 		cout << "loading from file: " << this->filename << "complete\n";
 		newGame* begin = new newGame();

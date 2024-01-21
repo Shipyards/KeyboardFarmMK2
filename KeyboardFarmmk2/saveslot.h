@@ -22,7 +22,7 @@ namespace ZTRengine
 		saveslot(string);
 		string get_name();
 		void runsave();
-		void runinfosave();
+		//void runinfosave();
 		void runload();
 		void run(char); // 'l' for load from this slot --- 's' for save to this slot
 	};

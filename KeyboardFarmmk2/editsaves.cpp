@@ -32,7 +32,7 @@ namespace ZTRengine
 		savenamesfile->write<string>(savename, ZTRFIO::endpos);
 		delete savenamesfile;
 		saveslot newslot(savename);
-		newslot.runinfosave();
+		newslot.runsave();
 		return true;
 	}
 	bool editsaves::removesave(string savename)

@@ -44,19 +44,19 @@ namespace ZTRengine
 		cout << "done saving!" << endl;
 		throw ZTRutils::ZTRexit();
 	}
-	void saveslot::runinfosave() // saves all the slot information
-	{
-		slotinfo thisinfo;
-		strncpy_s(thisinfo.datetime, ZTRutils::currentDateTime().c_str(), sizeof(thisinfo.datetime));
-		thisinfo.numberofitems = ZTRcore::Dcore->datapackets.size();
-		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
+	//void saveslot::runinfosave() // saves all the slot information
+	//{
+	//	slotinfo thisinfo;
+	//	strncpy_s(thisinfo.datetime, ZTRutils::currentDateTime().c_str(), sizeof(thisinfo.datetime));
+	//	thisinfo.numberofitems = ZTRcore::Dcore->datapackets.size();
+	//	ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 
-		workingfile->clear_file();
-		workingfile->write<string>(this->filename);
-		workingfile->write<slotinfo>(thisinfo);
+	//	workingfile->clear_file();
+	//	workingfile->write<string>(this->filename);
+	//	workingfile->write<slotinfo>(thisinfo);
 
-		delete workingfile;
-	}
+	//	delete workingfile;
+	//}
 	void saveslot::runload()
 	{
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
@@ -71,7 +71,10 @@ namespace ZTRengine
 		{
 		case ZTRtypes::test:
 			cout << "loading test_object" << endl;
-			{ gameObjectTest::DPlocal* loadpacket = new gameObjectTest::DPlocal(); }
+			{ 
+				gameObjectTest::DPlocal* loadpacket = new gameObjectTest::DPlocal(); 
+				loadpacket->deserialize(workingfile->read<char*>());
+			}
 			break;
 		default:
 			throw "stoopbid";

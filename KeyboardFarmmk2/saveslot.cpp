@@ -63,18 +63,18 @@ namespace ZTRengine
 		string packet_type;
 		ZTRtypes::ZTRtype loadobjtype;
 		slotinfo thisinfo;
-		cout << "loading from file: " << this->filename << endl;
+		cout << "loading from file: " << workingfile->read<string>(ZTRFIO::standard) << endl;
 		thisinfo = workingfile->read<slotinfo>(ZTRFIO::standard);
 
 		loadobjtype = workingfile->read<ZTRtypes::ZTRtype>(ZTRFIO::standard);
-		switch(loadobjtype)
+		switch (loadobjtype)
 		{
 		case ZTRtypes::test:
 			cout << "loading test_object" << endl;
-			gameObjectTest::DPlocal* loadpacket = new gameObjectTest::DPlocal();
+			{ gameObjectTest::DPlocal* loadpacket = new gameObjectTest::DPlocal(); }
 			break;
 		default:
-			throw ZTRutils::ID10T_ERR();
+			throw "stoopbid";
 			break;
 		}
 

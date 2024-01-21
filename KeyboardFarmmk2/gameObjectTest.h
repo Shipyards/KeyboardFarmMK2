@@ -11,7 +11,7 @@ class gameObjectTest :
 {
 public:
 	class DPlocal :
-		public datapacket
+		public virtual datapacket
 	{
 	public:
 		struct data

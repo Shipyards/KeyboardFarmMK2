@@ -1,4 +1,0 @@
-ZTFIO multithread compatiblilty;
-save/load sytem;
-multithreaded (lowest priority);
-processing system;

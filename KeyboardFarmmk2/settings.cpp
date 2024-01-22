@@ -4,7 +4,7 @@
 
 removesave::removesave()
 {
-
+	this->name = "Delete save";
 }
 removesave::run(char charin)
 {

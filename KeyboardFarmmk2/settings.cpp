@@ -1,5 +1,5 @@
 #include "settings.h"
-
+#include "ZTRengine.h"
 
 
 removesave::removesave()

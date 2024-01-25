@@ -1,7 +1,66 @@
-﻿  saveslot.cpp
+﻿  ZTRobject.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  credits.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  datapacket.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  editsaves.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\extract_saveslots.h(36,18): warning C4101: 'e': unreferenced local variable
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\editsaves.cpp(63,62): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+  gameObjectTest.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  load.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\extract_saveslots.h(36,18): warning C4101: 'e': unreferenced local variable
+  loadGame.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  main.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  manageObjects.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  newGame.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\newGame.cpp(12,7): warning C4101: 'e': unreferenced local variable
+  save.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\extract_saveslots.h(36,18): warning C4101: 'e': unreferenced local variable
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\save.cpp(68,18): warning C4101: 'e': unreferenced local variable
+  saveGame.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  saveslot.cpp
 C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
 C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
 C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\saveslot.cpp(25,62): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\saveslot.cpp(51,62): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\saveslot.cpp(54,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  settings.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\settings.cpp(10,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\settings.cpp(10,1): error C2556: 'int removesave::run(char)': overloaded function differs only by return type from 'void removesave::run(char)'
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\settings.h(9): message : see declaration of 'removesave::run'
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\settings.cpp(9,13): error C2371: 'removesave::run': redefinition; different basic types
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\settings.h(9): message : see declaration of 'removesave::run'
+  thisGame.cpp
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(163,27): warning C4552: '*': result of expression not used
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(21): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
+  Generating Code...
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\saveslot.cpp(65): error C4716: 'ZTRengine::saveslot::saveinfo': must return a value
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\saveslot.cpp(50): error C4716: 'ZTRengine::saveslot::loadinfo': must return a value
 C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\gameObjectTest.h(41): warning C4715: 'gameObjectTest::DPlocal::deserialize': not all control paths return a value
-  KeyboardFarmmk2.vcxproj -> C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\x64\Debug\KeyboardFarmmk2.exe
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\gameObjectTest.h(41): warning C4715: 'gameObjectTest::DPlocal::deserialize': not all control paths return a value
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\editsaves.cpp(71): warning C4715: 'ZTRengine::editsaves::removesave': not all control paths return a value

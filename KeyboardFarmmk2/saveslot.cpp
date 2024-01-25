@@ -28,8 +28,7 @@ namespace ZTRengine
 		string packet_type;
 
 		cout << "saving to file: " << this->filename << endl;
-		workingfile->write<string>(this->filename);
-		workingfile->write<slotinfo>(thisinfo);
+		workingfile->write<slotinfo>(this->info);
 
 		map<string, datapacket*>::iterator packetit;
 		for (packetit = ZTRcore::Dcore->datapackets.begin(); packetit != ZTRcore::Dcore->datapackets.end(); packetit++)
@@ -44,19 +43,26 @@ namespace ZTRengine
 		cout << "done saving!" << endl;
 		throw ZTRutils::ZTRexit();
 	}
-	//void saveslot::runinfosave() // saves all the slot information
-	//{
-	//	slotinfo thisinfo;
-	//	strncpy_s(thisinfo.datetime, ZTRutils::currentDateTime().c_str(), sizeof(thisinfo.datetime));
-	//	thisinfo.numberofitems = ZTRcore::Dcore->datapackets.size();
-	//	ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
+	streampos saveslot::loadinfo()
+	{
+		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
+		this->info = workingfile->read<slotinfo>(ZTRFIO::standard);
+	}
+	void saveslot::updateinfo()
+	{
+		strncpy_s(this->info.datetime, ZTRutils::currentDateTime().c_str(), sizeof(this->info.datetime));
+		this->info.numberofitems = ZTRcore::Dcore->datapackets.size();
+	}
+	streampos saveslot::saveinfo() // saves all the slot information
+	{
+		this->updateinfo();
+		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 
-	//	workingfile->clear_file();
-	//	workingfile->write<string>(this->filename);
-	//	workingfile->write<slotinfo>(thisinfo);
+		workingfile->write<string>(this->filename);
+		workingfile->write<slotinfo>(this->info);
 
-	//	delete workingfile;
-	//}
+		delete workingfile;
+	}
 	void saveslot::runload()
 	{
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
@@ -86,6 +92,10 @@ namespace ZTRengine
 		delete workingfile;
 		begin->run('~');
 	}
+	void saveslot::deletefile()
+	{
+
+	}
 	void saveslot::run(char mode) // 'l' for load from this slot --- 's' for save to this slot
 	{
 		switch (mode)
@@ -95,6 +105,9 @@ namespace ZTRengine
 			break;
 		case 's':
 			this->runsave();
+			break;
+		case 'd':
+			this->deletefile();
 			break;
 		default:
 			break;

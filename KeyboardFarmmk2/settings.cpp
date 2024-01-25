@@ -1,10 +1,10 @@
 #include "settings.h"
-
+#include "ZTRengine.h"
 
 
 removesave::removesave()
 {
-
+	this->name = "Delete save";
 }
 removesave::run(char charin)
 {

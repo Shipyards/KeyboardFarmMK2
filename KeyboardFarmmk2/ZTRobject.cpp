@@ -15,7 +15,6 @@
 */
 
 #include "ZTRobject.h"
-#include "ZTRengine.h"
 
 namespace ZTRengine
 {

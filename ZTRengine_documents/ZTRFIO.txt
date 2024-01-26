@@ -15,13 +15,10 @@ limitations under the License.
 ZTRFIO - ZTR engine file abstraction
 Binary only
 
-Jake T. Ray
-Asyntryn Industries
-
 This class is the ZTR engine's file manager system, it opens a Fstream to the files and absracts all reading and writing to the file.
 
 Notes:
-as of 12/26/2023 ZTFIO lacks multithreaded compaltibility (in-progress)
+as of 1/26/2024 ZTFIO lacks multithreaded compaltibility
 Fstream only has one pointer that is used by both the read and write function; ZTRFIO abstracts the read and write pointers
 
 member variables:

@@ -125,6 +125,14 @@ namespace ZTRengine
 		{
 			this->laststrmpos = this->Fstrm.tellg();
 		}
+		streampos get_ptrpos()
+		{
+			return this->Fstrm.tellg();
+		}
+		void set_ptrpos(streampos posin)
+		{
+			this->Fstrm.seekg(posin);
+		}
 		template<class T>
 		void write(T writevar) //only works with basic types
 		{

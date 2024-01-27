@@ -44,7 +44,7 @@ namespace ZTRengine
 		string packet_type;
 
 		cout << "saving to file: " << this->filename << endl;
-		workingfile->write<slotinfo>(this->info);
+		workingfile->set_ptrpos(this->saveinfo());
 
 		map<string, datapacket*>::iterator packetit;
 		for (packetit = ZTRcore::Dcore->datapackets.begin(); packetit != ZTRcore::Dcore->datapackets.end(); packetit++)
@@ -54,6 +54,7 @@ namespace ZTRengine
 			workingfile->write<ZTRtypes::ZTRtype>(workingpacket->type);
 			workingfile->write<char*>(workingpacket->serialize());
 		}
+
 		cout << "saving to file: " << this->filename << "complete\n";
 		delete workingfile;
 		cout << "done saving!" << endl;
@@ -63,6 +64,9 @@ namespace ZTRengine
 	{
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 		this->info = workingfile->read<slotinfo>(ZTRFIO::standard);
+
+		return workingfile->get_ptrpos();
+		delete workingfile;
 	}
 	void saveslot::updateinfo()
 	{
@@ -74,8 +78,9 @@ namespace ZTRengine
 		this->updateinfo();
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 
-		workingfile->write<string>(this->filename);
 		workingfile->write<slotinfo>(this->info);
+
+		return workingfile->get_ptrpos();
 
 		delete workingfile;
 	}

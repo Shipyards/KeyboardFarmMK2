@@ -91,7 +91,7 @@ namespace ZTRengine
 		ZTRtypes::ZTRtype loadobjtype;
 		slotinfo thisinfo;
 		cout << "loading from file: " << workingfile->read<string>(ZTRFIO::standard) << endl;
-		thisinfo = workingfile->read<slotinfo>(ZTRFIO::standard);
+		workingfile->set_ptrpos(this->loadinfo());
 
 		loadobjtype = workingfile->read<ZTRtypes::ZTRtype>(ZTRFIO::standard);
 		switch (loadobjtype)

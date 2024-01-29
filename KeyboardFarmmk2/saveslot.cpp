@@ -1,3 +1,19 @@
+/*
+   Copyright 2024 Jacob T. Ray
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
+
 #include "saveslot.h"
 #include "runable.h"
 #include "datapacket.h"
@@ -28,7 +44,7 @@ namespace ZTRengine
 		string packet_type;
 
 		cout << "saving to file: " << this->filename << endl;
-		workingfile->write<slotinfo>(this->info);
+		workingfile->set_ptrpos(this->saveinfo());
 
 		map<string, datapacket*>::iterator packetit;
 		for (packetit = ZTRcore::Dcore->datapackets.begin(); packetit != ZTRcore::Dcore->datapackets.end(); packetit++)
@@ -38,6 +54,7 @@ namespace ZTRengine
 			workingfile->write<ZTRtypes::ZTRtype>(workingpacket->type);
 			workingfile->write<char*>(workingpacket->serialize());
 		}
+
 		cout << "saving to file: " << this->filename << "complete\n";
 		delete workingfile;
 		cout << "done saving!" << endl;
@@ -47,6 +64,9 @@ namespace ZTRengine
 	{
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 		this->info = workingfile->read<slotinfo>(ZTRFIO::standard);
+
+		return workingfile->get_ptrpos();
+		delete workingfile;
 	}
 	void saveslot::updateinfo()
 	{
@@ -58,8 +78,9 @@ namespace ZTRengine
 		this->updateinfo();
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 
-		workingfile->write<string>(this->filename);
 		workingfile->write<slotinfo>(this->info);
+
+		return workingfile->get_ptrpos();
 
 		delete workingfile;
 	}
@@ -70,7 +91,7 @@ namespace ZTRengine
 		ZTRtypes::ZTRtype loadobjtype;
 		slotinfo thisinfo;
 		cout << "loading from file: " << workingfile->read<string>(ZTRFIO::standard) << endl;
-		thisinfo = workingfile->read<slotinfo>(ZTRFIO::standard);
+		workingfile->set_ptrpos(this->loadinfo());
 
 		loadobjtype = workingfile->read<ZTRtypes::ZTRtype>(ZTRFIO::standard);
 		switch (loadobjtype)

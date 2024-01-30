@@ -6,7 +6,7 @@ removesave::removesave()
 {
 	this->name = "Delete save";
 }
-removesave::run(char charin)
+void removesave::run(char charin)
 {
 
 }

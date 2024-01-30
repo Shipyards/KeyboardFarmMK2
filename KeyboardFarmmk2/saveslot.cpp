@@ -29,6 +29,9 @@ namespace ZTRengine
 	{
 		this->filename = filenamein;
 		this->filenameactual = filenamein + ".bin";
+		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
+		if (workingfile->is_empty()) { cout << "warning saveslot is file is emtpy" << endl; }
+		else { this->info = workingfile->read<slotinfo>(); }
 	}
 	string saveslot::get_name()
 	{

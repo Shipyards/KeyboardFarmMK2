@@ -148,12 +148,16 @@ namespace ZTRengine
 			{
 			case endpos:
 				this->ptr_toend();
+				break;
 			case beginpos:
 				this->ptr_tostart();
+				break;
 			case standard:
 				this->ptr_towrite();
+				break;
 			case lastpos:
 				this->ptr_goback();
+				break;
 			}
 			this->Fstrm.write(reinterpret_cast<char*>(&writevar), sizeof(writevar));
 			this->record_writepos();
@@ -174,17 +178,22 @@ namespace ZTRengine
 			{
 			case endpos:
 				this->ptr_toend();
+				break;
 			case beginpos:
 				this->ptr_tostart();
+				break;
 			case standard:
 				this->ptr_towrite();
+				break;
 			case currentpos:
 				break;
 			case lastpos:
 				this->ptr_goback();
+				break;
 			default:
 				throw ZTRutils::ID10T_ERR(); // :)
 			}
+			this->Fstrm.seekg(0, ios::end);
 			this->Fstrm.write(reinterpret_cast<const char*>(&sizeofstring), sizeof(size_t));
 			this->Fstrm.write(writevar.c_str(), sizeofstring);
 			this->record_writepos();
@@ -196,18 +205,49 @@ namespace ZTRengine
 			{
 			case endpos:
 				this->ptr_toend();
+				break;
 			case beginpos:
 				this->ptr_tostart();
+				break;
 			case standard:
 				this->ptr_toread();
+				break;
 			case currentpos:
 				break;
 			case lastpos:
 				this->ptr_goback();
+				break;
 			default:
 				throw ZTRutils::ID10T_ERR(); // :)
 			}
 			T returnvar = T();  
+			this->Fstrm.read((char*)(&returnvar), sizeof(T));
+			this->record_readpos();
+			return returnvar;
+		}
+		template<class T>
+		T read(to_frommode modeset, size_t readsize) //only works with basic types
+		{
+			switch (modeset)
+			{
+			case endpos:
+				this->ptr_toend();
+				break;
+			case beginpos:
+				this->ptr_tostart();
+				break;
+			case standard:
+				this->ptr_toread();
+				break;
+			case currentpos:
+				break;
+			case lastpos:
+				this->ptr_goback();
+				break;
+			default:
+				throw ZTRutils::ID10T_ERR(); // :)
+			}
+			T returnvar = T();
 			this->Fstrm.read((char*)(&returnvar), sizeof(T));
 			this->record_readpos();
 			return returnvar;
@@ -227,14 +267,18 @@ namespace ZTRengine
 			{
 			case endpos:
 				this->ptr_toend();
+				break;
 			case beginpos:
 				this->ptr_tostart();
+				break;
 			case standard:
 				this->ptr_toread();
+				break;
 			case currentpos:
 				break;
 			case lastpos:
 				this->ptr_goback();
+				break;
 			default:
 				throw ZTRutils::ID10T_ERR(); // :)
 			}
@@ -245,15 +289,13 @@ namespace ZTRengine
 			this->record_readpos();
 			return holdstring;
 		}
-		template<> std::string read<std::string>()
+		template<> char* read<char*>(to_frommode modeset, size_t readsize)
 		{
 			this->ptr_toread();
-			size_t size;  
-			this->Fstrm.read(reinterpret_cast<char*>(&size), sizeof(size_t));
-			std::string holdstring(size, '\0');
-			this->Fstrm.read(&holdstring[0], size);
+			char* holder;
+			this->Fstrm.read(holder, sizeof(readsize));
 			this->record_readpos();
-			return holdstring;
+			return holder;
 		}
 	};
 }

@@ -41,48 +41,51 @@ namespace ZTRengine
 	{
 		slotinfo thisinfo;
 		strncpy_s(thisinfo.datetime, ZTRutils::currentDateTime().c_str(), sizeof(thisinfo.datetime));
+		cout << "datetime" << ZTRutils::currentDateTime().c_str() << endl;
 		thisinfo.numberofitems = ZTRcore::Dcore->datapackets.size();
 
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 		string packet_type;
 
 		cout << "saving to file: " << this->filename << endl;
-		workingfile->set_ptrpos(this->saveinfo());
+		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 
 		map<string, datapacket*>::iterator packetit;
 		for (packetit = ZTRcore::Dcore->datapackets.begin(); packetit != ZTRcore::Dcore->datapackets.end(); packetit++)
 		{
 			datapacket* workingpacket = packetit->second;
 			cout << "saving datapacket: " << string(workingpacket->GUID) << endl;
-			workingfile->write<ZTRtypes::ZTRtype>(workingpacket->type);
-			workingfile->write<char*>(workingpacket->serialize());
+			workingfile->write<ZTRtypes::ZTRtype>(workingpacket->type, ZTRFIO::standard);
+			workingfile->write<char*>(workingpacket->serialize(), ZTRFIO::standard);
 		}
 
 		cout << "saving to file: " << this->filename << "complete\n";
 		delete workingfile;
 		cout << "done saving!" << endl;
-		throw ZTRutils::ZTRexit();
 	}
 	streampos saveslot::loadinfo()
 	{
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
-		this->info = workingfile->read<slotinfo>(ZTRFIO::standard);
+		this->info = workingfile->read<slotinfo>(ZTRFIO::beginpos);
 
 		return workingfile->get_ptrpos();
+
 		delete workingfile;
 	}
 	void saveslot::updateinfo()
 	{
 		strncpy_s(this->info.datetime, ZTRutils::currentDateTime().c_str(), sizeof(this->info.datetime));
 		this->info.numberofitems = ZTRcore::Dcore->datapackets.size();
+		cout << this->info.datetime << endl;
 	}
 	streampos saveslot::saveinfo() // saves all the slot information
 	{
 		this->updateinfo();
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
 
-		workingfile->write<slotinfo>(this->info);
+		workingfile->write<slotinfo>(this->info, ZTRFIO::beginpos);
 
+		cout << workingfile->get_ptrpos() << endl;
 		return workingfile->get_ptrpos();
 
 		delete workingfile;
@@ -93,8 +96,8 @@ namespace ZTRengine
 		string packet_type;
 		ZTRtypes::ZTRtype loadobjtype;
 		slotinfo thisinfo;
-		cout << "loading from file: " << workingfile->read<string>(ZTRFIO::standard) << endl;
-		workingfile->set_ptrpos(this->loadinfo());
+		cout << "loading from file: " << this->filename << endl;
+		this->info = workingfile->read<slotinfo>(ZTRFIO::beginpos);
 
 		loadobjtype = workingfile->read<ZTRtypes::ZTRtype>(ZTRFIO::standard);
 		switch (loadobjtype)
@@ -111,7 +114,7 @@ namespace ZTRengine
 			break;
 		}
 
-		cout << "loading from file: " << this->filename << "complete\n";
+		cout << "loading from file: " << this->filename << "  complete\n";
 		newGame* begin = new newGame();
 		delete workingfile;
 		begin->run('~');

@@ -42,5 +42,6 @@ namespace ZTRengine
 		virtual char* serialize();
 		virtual size_t datasize();
 		virtual bool deserialize(char*);
+		virtual bool deserialize(data);
 	};
 }

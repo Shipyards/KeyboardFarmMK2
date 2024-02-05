@@ -44,4 +44,9 @@ namespace ZTRengine
 		this->packetdata = *reinterpret_cast<data*>(&buildfrom);
 		return true;
 	}
+	bool datapacket::deserialize(data buildfrom)
+	{
+		this->packetdata = buildfrom;
+		return true;
+	}
 }

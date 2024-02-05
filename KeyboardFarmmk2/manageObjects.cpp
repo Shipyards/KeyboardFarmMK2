@@ -39,6 +39,7 @@ public:
 	}
 	void run(char runmode)
 	{
+		workingobj->testfunc1();
 		workingobj->testfunc2();
 	}
 	string get_name()

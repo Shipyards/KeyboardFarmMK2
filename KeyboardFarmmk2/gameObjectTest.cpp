@@ -51,9 +51,9 @@ void gameObjectTest::testfunc2()
 	cout << "c: " << flush;
 	cin >> c1;
 	cout << flush;
-	this->datapack->packetdata.a = a1;
-	this->datapack->packetdata.b = b1;
-	this->datapack->packetdata.c = c1;
+	this->datapack->packetdata.a = ZTRutils::chartoint(a1);
+	this->datapack->packetdata.b = ZTRutils::chartoint(b1);
+	this->datapack->packetdata.c = ZTRutils::chartoint(c1);
 }
 void gameObjectTest::set(int Ain, int Bin, int Cin)
 {

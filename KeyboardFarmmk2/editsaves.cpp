@@ -48,7 +48,8 @@ namespace ZTRengine
 		savenamesfile->write<string>(savename, ZTRFIO::endpos);
 		delete savenamesfile;
 		saveslot newslot(savename);
-		newslot.runsave();
+		try { newslot.runsave(); }
+		catch (ZTRutils::ZTRexit e1) {};
 		return true;
 	}
 	bool editsaves::removesave(string savename)

@@ -38,7 +38,13 @@ int main()
 	credits* credit = new credits();
 	vector<runable*> menuitems = { begin, load, credit };
 	ZTRinterface* mainInterface = new ZTRinterface("Keyboard Farm", menuitems);
-	mainInterface->run('~');
+	
+	try { mainInterface->run('~'); }
+	catch (ZTRutils::ZTRexit e1)
+	{
+		cout << "goodbye" << endl;
+	}
+
 	delete mainInterface;
 }
 

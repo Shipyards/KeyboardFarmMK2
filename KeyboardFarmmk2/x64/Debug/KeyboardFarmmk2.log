@@ -1,8 +1,6 @@
-﻿  saveslot.cpp
+﻿  ZTRinterface.cpp
 C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRutils.h(179,27): warning C4552: '*': result of expression not used
-C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRobject.h(37): warning C4091: 'virtual ': ignored on left of 'ZTRengine::ZTRobject::DPlocal' when no variable is declared
-C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\saveslot.cpp(45,62): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\saveslot.cpp(78,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\saveslot.cpp(98,12): warning C4101: 'thisinfo': unreferenced local variable
-C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\gameObjectTest.h(57): warning C4715: 'gameObjectTest::DPlocal::deserialize': not all control paths return a value
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRinterface.cpp(73,29): warning C4101: 'e1': unreferenced local variable
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRinterface.cpp(78,33): warning C4101: 'c1': unreferenced local variable
+C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\KeyboardFarmmk2\ZTRinterface.cpp(83,31): warning C4101: 'i1': unreferenced local variable
   KeyboardFarmmk2.vcxproj -> C:\Users\jake\Documents\Coding\C++\KeyboardFarmmk2\x64\Debug\KeyboardFarmmk2.exe

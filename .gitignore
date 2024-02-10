@@ -1,3 +1,6 @@
+#temp_data
+*.bin
+
 # Prerequisites
 *.d
 

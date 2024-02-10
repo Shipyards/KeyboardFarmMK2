@@ -292,7 +292,7 @@ namespace ZTRengine
 		template<> char* read<char*>(to_frommode modeset, size_t readsize)
 		{
 			this->ptr_toread();
-			char* holder;
+			char* holder = new char;
 			this->Fstrm.read(holder, sizeof(readsize));
 			this->record_readpos();
 			return holder;

@@ -39,16 +39,13 @@ namespace ZTRengine
 	}
 	void saveslot::runsave()
 	{
-		slotinfo thisinfo;
-		strncpy_s(thisinfo.datetime, ZTRutils::currentDateTime().c_str(), sizeof(thisinfo.datetime));
-		cout << "datetime" << ZTRutils::currentDateTime().c_str() << endl;
-		thisinfo.numberofitems = ZTRcore::Dcore->datapackets.size();
-
-		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
-		string packet_type;
+		this->updateinfo();
+		cout << "datetime" << ZTRutils::currentDateTime().c_str() << "||" << this->info.datetime << endl;
 
 		cout << "saving to file: " << this->filename << endl;
 		ZTRFIO* workingfile = new ZTRFIO(this->filenameactual);
+
+		workingfile->write<slotinfo>(this->info,ZTRFIO::beginpos);
 
 		map<string, datapacket*>::iterator packetit;
 		for (packetit = ZTRcore::Dcore->datapackets.begin(); packetit != ZTRcore::Dcore->datapackets.end(); packetit++)
@@ -106,7 +103,7 @@ namespace ZTRengine
 			cout << "loading test_object" << endl;
 			{ 
 				gameObjectTest::DPlocal* loadpacket = new gameObjectTest::DPlocal(); 
-				loadpacket->deserialize(workingfile->read<char*>());
+				loadpacket->deserialize(workingfile->read<char*>(ZTRFIO::standard, loadpacket->sizeofdata()));
 			}
 			break;
 		default:

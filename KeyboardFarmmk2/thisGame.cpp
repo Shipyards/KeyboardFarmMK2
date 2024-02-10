@@ -35,4 +35,5 @@ void keyBoardFarm::start()
 	ZTRinterface gamemenu = ZTRinterface("Keyboard farm", mainmenuitems);
 	gamemenu.run('~');
 	delete mObj, sG;
+	return;
 } 

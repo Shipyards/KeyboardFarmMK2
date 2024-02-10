@@ -19,7 +19,7 @@
 #include "runable.h"
 #include <iostream>
 #include <vector>
-#include <conio.h>
+//#include <conio.h>
 
 using namespace std;
 
@@ -33,6 +33,7 @@ namespace ZTRengine
 		{
 			this->options.push_back(runables[x]);
 		}
+		this->options.push_back(new ZTRinterfaceexit());
 	}
 	ZTRinterface::ZTRinterface(string name, vector<runable*> runables) //options should throw 'ZTRcontinue' to loop back to the interface
 	{
@@ -95,10 +96,6 @@ namespace ZTRengine
 	}
 	ZTRinterface::~ZTRinterface()
 	{
-		vector<runable*>::const_iterator it;
-		for (it = this->options.cbegin(); it != this->options.cend(); it++)
-		{
-			delete *it;
-		}
+
 	}
 };
